@@ -1,19 +1,13 @@
 import React from "react"
 import { StyleSheet, View, Text } from "react-native"
 
-export default function ForgotPassword() {
-    return (
-        <View style={styles.container}>
-            <Text style={styles.font}>Label</Text>
-        </View>
-    )
+export default function ForgotPassword(props) {
+    return <Text style={styles.font}>{props.text}</Text>
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
     font: {
-        fontSize: 26,
+        fontSize: 16,
+        marginBottom: 10,
     },
 })

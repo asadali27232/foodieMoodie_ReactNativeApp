@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: "center",
         borderRadius: 22,
-        marginBottom: 22,
+        marginBottom: 18,
     },
     font: {
         fontSize: 14,

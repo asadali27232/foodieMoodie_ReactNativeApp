@@ -35,7 +35,7 @@ export default function Login() {
                 <FoodieInput
                     placeholder="E-mail"
                     haveIcon={true}
-                    keyboardType="numeric"
+                    keyboardType="default"
                     path={require("../assets/icon_mail.png")}
                 />
                 <FoodieInput
@@ -50,6 +50,7 @@ export default function Login() {
                             alignSelf: "flex-end",
                             marginBottom: 22,
                             fontSize: 12,
+                            color: "#383F53",
                         }}
                     >
                         Forgot Password?
@@ -63,6 +64,7 @@ export default function Login() {
                             alignSelf: "center",
                             marginBottom: 22,
                             fontSize: 12,
+                            color: "#383F53",
                         }}
                     >
                         Or login with
@@ -78,9 +80,10 @@ export default function Login() {
                             alignSelf: "center",
                             marginBottom: 22,
                             fontSize: 12,
+                            color: "#383F53",
                         }}
                     >
-                        New to foodie moodie? Sign Up
+                        New to Foodie Moodie? Sign Up
                     </Text>
                 </TouchableOpacity>
             </View>
