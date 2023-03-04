@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar"
-import { StyleSheet, Text, View } from "react-native"
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native"
 import FoodieButton from "../Components/FoodieButton"
 import FoodieInput from "../Components/FoodieInput"
 
@@ -19,7 +19,7 @@ export default function Login() {
                 </Text>
             </View>
             <View
-                style={{ flex: 0.15, width: "100%", justifyContent: "center" }}
+                style={{ flex: 0.2, width: "100%", justifyContent: "center" }}
             >
                 <Text
                     style={{
@@ -44,38 +44,45 @@ export default function Login() {
                     keyboardType="default"
                     path={require("../assets/icon_lock.png")}
                 />
-                <Text
-                    style={{
-                        alignSelf: "flex-end",
-                        marginBottom: 22,
-                        fontSize: 12,
-                    }}
-                >
-                    Forgot Password?
-                </Text>
+                <TouchableOpacity>
+                    <Text
+                        style={{
+                            alignSelf: "flex-end",
+                            marginBottom: 22,
+                            fontSize: 12,
+                        }}
+                    >
+                        Forgot Password?
+                    </Text>
+                </TouchableOpacity>
+
                 <FoodieButton text="Login" />
-                <Text
-                    style={{
-                        alignSelf: "center",
-                        marginBottom: 22,
-                        fontSize: 12,
-                    }}
-                >
-                    Or login with
-                </Text>
+                <TouchableOpacity>
+                    <Text
+                        style={{
+                            alignSelf: "center",
+                            marginBottom: 22,
+                            fontSize: 12,
+                        }}
+                    >
+                        Or login with
+                    </Text>
+                </TouchableOpacity>
             </View>
             <View
                 style={{ flex: 0.2, width: "100%", justifyContent: "flex-end" }}
             >
-                <Text
-                    style={{
-                        alignSelf: "center",
-                        marginBottom: 22,
-                        fontSize: 12,
-                    }}
-                >
-                    New to foodie moodie? Sign Up
-                </Text>
+                <TouchableOpacity>
+                    <Text
+                        style={{
+                            alignSelf: "center",
+                            marginBottom: 22,
+                            fontSize: 12,
+                        }}
+                    >
+                        New to foodie moodie? Sign Up
+                    </Text>
+                </TouchableOpacity>
             </View>
             <StatusBar style="auto" />
         </View>
