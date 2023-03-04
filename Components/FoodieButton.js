@@ -12,7 +12,7 @@ export default function FoodieButton(props) {
 const styles = StyleSheet.create({
     container: {
         width: "100%",
-        height: 70,
+        height: 60,
         backgroundColor: "#F44647",
         alignItems: 'center',
         justifyContent: "center",

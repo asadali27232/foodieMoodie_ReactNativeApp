@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     },
     input: {
         flex: 1,
-        height: 70,
+        height: 60,
         fontSize: 12,
         justifyContent: "center",
         marginStart: 30,
