@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     button: {
-        padding: 10,
+        paddingBottom: 10,
         borderRadius: 10,
     },
 })

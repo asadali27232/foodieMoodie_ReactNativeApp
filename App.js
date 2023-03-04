@@ -9,7 +9,7 @@ import Verification from "./Screens/Verification"
 export default function App() {
     return (
         <View style={styles.container}>
-            <SignUp />
+            <Verification />
         </View>
     )
 }
