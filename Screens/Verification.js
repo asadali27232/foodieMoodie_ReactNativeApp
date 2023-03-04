@@ -2,7 +2,6 @@ import React from "react"
 import { StyleSheet, View, Text } from "react-native"
 import FoodieButton from "../Components/FoodieButton"
 import FoodieInput from "../Components/FoodieInput"
-import Label from "../Components/Label"
 import Navbar from "../Components/Navbar"
 
 export default function Verification() {
@@ -28,7 +27,14 @@ export default function Verification() {
                 >
                     We have sent SMS to:
                 </Text>
-                <Label text="+62 (XXX) XXX-X12" />
+                <Text
+                    style={{
+                        fontSize: 16,
+                        marginBottom: 18,
+                    }}
+                >
+                    +62 (XXX) XXX-X12
+                </Text>
                 <FoodieInput
                     placeholder="Email"
                     haveIcon={false}
