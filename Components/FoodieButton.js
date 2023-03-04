@@ -1,19 +1,26 @@
 import React from "react"
-import { StyleSheet, View, Text } from "react-native"
+import { StyleSheet, View, Text, TouchableOpacity } from "react-native"
 
-export default function FoodieButton() {
+export default function FoodieButton(props) {
     return (
-        <View style={styles.container}>
-            <Text style={styles.font}>Button</Text>
-        </View>
+        <TouchableOpacity style={styles.container}>
+            <Text style={styles.font}>{props.text}</Text>
+        </TouchableOpacity>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        width: "100%",
+        height: 70,
+        backgroundColor: "#F44647",
+        alignItems: 'center',
+        justifyContent: "center",
+        borderRadius: 22,
+        marginBottom: 22,
     },
     font: {
-        fontSize: 26,
+        fontSize: 14,
+        color: "#ffffff",
     },
 })

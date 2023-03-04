@@ -1,10 +1,25 @@
-import React from "react"
-import { StyleSheet, View, Text } from "react-native"
+import { StatusBar } from "expo-status-bar"
+import { StyleSheet, Text, View } from "react-native"
+import FoodieButton from "../Components/FoodieButton"
+import FoodieInput from "../Components/FoodieInput"
 
 export default function Login() {
     return (
         <View style={styles.container}>
-            <Text style={styles.font}>Login</Text>
+            <FoodieInput
+                placeholder="E-mail"
+                haveIcon={true}
+                keyboardType="numeric"
+                path={require("../assets/icon_mail.png")}
+            />
+            <FoodieInput
+                placeholder="Password"
+                haveIcon={true}
+                keyboardType="default"
+                path={require("../assets/icon_lock.png")}
+            />
+            <FoodieButton text="Login" />
+            <StatusBar style="auto" />
         </View>
     )
 }
@@ -12,8 +27,9 @@ export default function Login() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-    },
-    font: {
-        fontSize: 26,
+        width: "100%",
+        backgroundColor: "#fff",
+        alignItems: "center",
+        justifyContent: "center",
     },
 })

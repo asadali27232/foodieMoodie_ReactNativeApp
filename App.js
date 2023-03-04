@@ -7,12 +7,12 @@ import ResetPassword from "./Screens/ResetPassword"
 import SignUp from "./Screens/SignUp"
 import Verification from "./Screens/Verification"
 import FoodieButton from "./Components/FoodieButton"
+import FoodieInput from "./Components/FoodieInput"
 
 export default function App() {
     return (
         <View style={styles.container}>
-            <FoodieButton />
-            <StatusBar style="auto" />
+            <Login />
         </View>
     )
 }
@@ -20,8 +20,10 @@ export default function App() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        width: "100%",
         backgroundColor: "#fff",
         alignItems: "center",
         justifyContent: "center",
+        padding: 22,
     },
 })
