@@ -50,7 +50,7 @@ export default function Login() {
                             alignSelf: "flex-end",
                             marginBottom: 22,
                             fontSize: 12,
-                            color: "#383F53",
+                            color: "#5A5B5E",
                         }}
                     >
                         Forgot Password?
@@ -64,7 +64,7 @@ export default function Login() {
                             alignSelf: "center",
                             marginBottom: 22,
                             fontSize: 12,
-                            color: "#383F53",
+                            color: "#5A5B5E",
                         }}
                     >
                         Or login with
@@ -80,7 +80,7 @@ export default function Login() {
                             alignSelf: "center",
                             marginBottom: 22,
                             fontSize: 12,
-                            color: "#383F53",
+                            color: "#5A5B5E",
                         }}
                     >
                         New to Foodie Moodie? Sign Up

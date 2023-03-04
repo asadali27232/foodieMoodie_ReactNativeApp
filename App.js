@@ -12,7 +12,7 @@ import FoodieInput from "./Components/FoodieInput"
 export default function App() {
     return (
         <View style={styles.container}>
-            <SignUp />
+            <ResetPassword />
         </View>
     )
 }

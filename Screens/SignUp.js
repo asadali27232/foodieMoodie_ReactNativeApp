@@ -44,6 +44,8 @@ export default function SignUp() {
                         flexDirection: "row",
                         alignItems: "flex-start",
                         justifyContent: "flex-start",
+                        marginTop: -15,
+                        marginBottom: 10,
                     }}
                 >
                     <CheckBox
@@ -63,7 +65,7 @@ export default function SignUp() {
                         <Text
                             style={{
                                 fontSize: 14,
-                                color: "#383F53",
+                                color: "#5A5B5E",
                             }}
                         >
                             I accept the{" "}
@@ -84,7 +86,7 @@ export default function SignUp() {
                             alignSelf: "center",
                             marginBottom: 22,
                             fontSize: 12,
-                            color: "#383F53",
+                            color: "#5A5B5E",
                         }}
                     >
                         Or sign up with
@@ -100,7 +102,7 @@ export default function SignUp() {
                             alignSelf: "center",
                             marginBottom: 22,
                             fontSize: 12,
-                            color: "#383F53",
+                            color: "#5A5B5E",
                         }}
                     >
                         Already on Foodie Moodie? Sign in
