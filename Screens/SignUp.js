@@ -1,7 +1,7 @@
 import React from "react"
-import { StyleSheet, View, Text } from "react-native-web"
+import { StyleSheet, View, Text } from "react-native"
 
-export default function ForgotPassword() {
+export default function SignUp() {
     return (
         <View style={styles.container}>
             <Text style={styles.font}>Sign Up</Text>
