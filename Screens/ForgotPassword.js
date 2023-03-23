@@ -5,7 +5,7 @@ import FoodieInput from "../Components/FoodieInput"
 import Label from "../Components/Label"
 import Navbar from "../Components/Navbar"
 
-export default function ForgotPassword() {
+export default function ForgotPassword({ navigation }) {
     return (
         <View style={styles.container}>
             <View style={{ flex: 0.1, width: "100%" }}>
@@ -21,7 +21,8 @@ export default function ForgotPassword() {
                         color: "#5A5B5E",
                     }}
                 >
-                    We need to verify you. We will send you a one-time authorization code.
+                    We need to verify you. We will send you a one-time
+                    authorization code.
                 </Text>
                 <FoodieInput
                     placeholder="Email"

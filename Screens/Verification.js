@@ -4,7 +4,7 @@ import FoodieButton from "../Components/FoodieButton"
 import FoodieInput from "../Components/FoodieInput"
 import Navbar from "../Components/Navbar"
 
-export default function Verification() {
+export default function Verification({ navigation }) {
     return (
         <View style={styles.container}>
             <View style={{ flex: 0.1, width: "100%" }}>

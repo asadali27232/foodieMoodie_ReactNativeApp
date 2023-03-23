@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native"
 import FoodieButton from "../Components/FoodieButton"
 import FoodieInput from "../Components/FoodieInput"
 
-export default function Login() {
+export default function Login({ navigation }) {
     return (
         <View style={styles.container}>
             <View
@@ -44,7 +44,9 @@ export default function Login() {
                     keyboardType="default"
                     path={require("../assets/icon_lock.png")}
                 />
-                <TouchableOpacity>
+                <TouchableOpacity
+                    onPress={navigation.navigate("ForgotPassword")}
+                >
                     <Text
                         style={{
                             alignSelf: "flex-end",
@@ -74,7 +76,7 @@ export default function Login() {
             <View
                 style={{ flex: 0.2, width: "100%", justifyContent: "flex-end" }}
             >
-                <TouchableOpacity>
+                <TouchableOpacity onPress={navigation.navigate("SignUp")}>
                     <Text
                         style={{
                             alignSelf: "center",

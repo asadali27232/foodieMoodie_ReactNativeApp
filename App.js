@@ -6,10 +6,32 @@ import ResetPassword from "./Screens/ResetPassword"
 import SignUp from "./Screens/SignUp"
 import Verification from "./Screens/Verification"
 
+import { createStackNavigator } from "@react-navigation/stack"
+import { NavigationContainer } from "@react-navigation/native"
+const Stack = createStackNavigator()
+
 export default function App() {
     return (
         <View style={styles.container}>
-            <Verification />
+            <NavigationContainer>
+                <Stack.Navigator initialRouteName="Login">
+                    <Stack.Screen name="LandingPage" component={LandingPage} />
+                    <Stack.Screen name="Login" component={Login} />
+                    <Stack.Screen name="SignUp" component={SignUp} />
+                    <Stack.Screen
+                        name="ForgotPassword"
+                        component={ForgotPassword}
+                    />
+                    <Stack.Screen
+                        name="ResetPassword"
+                        component={ResetPassword}
+                    />
+                    <Stack.Screen
+                        name="Verification"
+                        component={Verification}
+                    />
+                </Stack.Navigator>
+            </NavigationContainer>
         </View>
     )
 }

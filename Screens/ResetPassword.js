@@ -5,7 +5,7 @@ import FoodieInput from "../Components/FoodieInput"
 import Label from "../Components/Label"
 import Navbar from "../Components/Navbar"
 
-export default function ResetPassword() {
+export default function ResetPassword({ navigation }) {
     return (
         <View style={styles.container}>
             <View style={{ flex: 0.1, width: "100%" }}>

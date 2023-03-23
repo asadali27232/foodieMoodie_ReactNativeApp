@@ -6,7 +6,7 @@ import FoodieInput from "../Components/FoodieInput"
 import Label from "../Components/Label"
 import Navbar from "../Components/Navbar"
 
-export default function SignUp() {
+export default function SignUp({ navigation }) {
     const [isChecked, setIsChecked] = useState(false)
 
     return (
@@ -96,7 +96,7 @@ export default function SignUp() {
             <View
                 style={{ flex: 0.2, width: "100%", justifyContent: "flex-end" }}
             >
-                <TouchableOpacity>
+                <TouchableOpacity onPress={navigation.navigate("Login")}>
                     <Text
                         style={{
                             alignSelf: "center",
