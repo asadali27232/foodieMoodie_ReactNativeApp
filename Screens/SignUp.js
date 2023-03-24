@@ -46,8 +46,7 @@ export default function SignUp({ navigation }) {
                         justifyContent: "flex-start",
                         marginTop: -15,
                         marginBottom: 10,
-                    }}
-                >
+                    }}>
                     <CheckBox
                         style={{
                             flex: 0.1,
@@ -60,14 +59,12 @@ export default function SignUp({ navigation }) {
                         style={{
                             flex: 0.9,
                             alignSelf: "center",
-                        }}
-                    >
+                        }}>
                         <Text
                             style={{
                                 fontSize: 14,
                                 color: "#5A5B5E",
-                            }}
-                        >
+                            }}>
                             I accept the{" "}
                             <Text style={{ fontWeight: "bold" }}>
                                 Terms of Use{" "}
@@ -87,15 +84,17 @@ export default function SignUp({ navigation }) {
                             marginBottom: 22,
                             fontSize: 12,
                             color: "#5A5B5E",
-                        }}
-                    >
+                        }}>
                         Or sign up with
                     </Text>
                 </TouchableOpacity>
             </View>
             <View
-                style={{ flex: 0.2, width: "100%", justifyContent: "flex-end" }}
-            >
+                style={{
+                    flex: 0.2,
+                    width: "100%",
+                    justifyContent: "flex-end",
+                }}>
                 <TouchableOpacity onPress={() => navigation.navigate("Login")}>
                     <Text
                         style={{
@@ -103,8 +102,7 @@ export default function SignUp({ navigation }) {
                             marginBottom: 22,
                             fontSize: 12,
                             color: "#5A5B5E",
-                        }}
-                    >
+                        }}>
                         Already on Foodie Moodie? Sign in
                     </Text>
                 </TouchableOpacity>
