@@ -1,3 +1,4 @@
+import React from "react"
 import { StyleSheet, View } from "react-native"
 import ForgotPassword from "./Screens/ForgotPassword"
 import LandingPage from "./Screens/LandingPage"
@@ -6,15 +7,15 @@ import ResetPassword from "./Screens/ResetPassword"
 import SignUp from "./Screens/SignUp"
 import Verification from "./Screens/Verification"
 
-import { createStackNavigator } from "@react-navigation/stack"
 import { NavigationContainer } from "@react-navigation/native"
-const Stack = createStackNavigator()
+import { createNativeStackNavigator } from "@react-navigation/native-stack"
+const Stack = createNativeStackNavigator()
 
 export default function App() {
     return (
         <View style={styles.container}>
             <NavigationContainer>
-                <Stack.Navigator initialRouteName="Login">
+                <Stack.Navigator initialRouteName="LandingPage">
                     <Stack.Screen name="LandingPage" component={LandingPage} />
                     <Stack.Screen name="Login" component={Login} />
                     <Stack.Screen name="SignUp" component={SignUp} />
