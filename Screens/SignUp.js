@@ -96,7 +96,7 @@ export default function SignUp({ navigation }) {
             <View
                 style={{ flex: 0.2, width: "100%", justifyContent: "flex-end" }}
             >
-                <TouchableOpacity onPress={navigation.navigate("Login")}>
+                <TouchableOpacity onPress={() => navigation.navigate("Login")}>
                     <Text
                         style={{
                             alignSelf: "center",
@@ -117,6 +117,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         width: "100%",
+        backgroundColor: "#fff",
     },
     font: {
         fontSize: 26,

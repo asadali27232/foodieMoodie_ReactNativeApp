@@ -13,19 +13,42 @@ const Stack = createNativeStackNavigator()
 
 export default function App() {
     return (
-        <NavigationContainer>
-            <Stack.Navigator initialRouteName="Login">
-                <Stack.Screen name="LandingPage" component={LandingPage} />
-                <Stack.Screen name="Login" component={Login} />
-                <Stack.Screen name="SignUp" component={SignUp} />
-                <Stack.Screen
-                    name="ForgotPassword"
-                    component={ForgotPassword}
-                />
-                <Stack.Screen name="ResetPassword" component={ResetPassword} />
-                <Stack.Screen name="Verification" component={Verification} />
-            </Stack.Navigator>
-        </NavigationContainer>
+        <View style={styles.container}>
+            <NavigationContainer>
+                <Stack.Navigator initialRouteName="Login">
+                    <Stack.Screen
+                        name="LandingPage"
+                        component={LandingPage}
+                        options={{ headerShown: false }}
+                    />
+                    <Stack.Screen
+                        name="Login"
+                        component={Login}
+                        options={{ headerShown: false }}
+                    />
+                    <Stack.Screen
+                        name="SignUp"
+                        component={SignUp}
+                        options={{ headerShown: false }}
+                    />
+                    <Stack.Screen
+                        name="ForgotPassword"
+                        component={ForgotPassword}
+                        options={{ headerShown: false }}
+                    />
+                    <Stack.Screen
+                        name="ResetPassword"
+                        component={ResetPassword}
+                        options={{ headerShown: false }}
+                    />
+                    <Stack.Screen
+                        name="Verification"
+                        component={Verification}
+                        options={{ headerShown: false }}
+                    />
+                </Stack.Navigator>
+            </NavigationContainer>
+        </View>
     )
 }
 
@@ -34,8 +57,6 @@ const styles = StyleSheet.create({
         flex: 1,
         width: "100%",
         backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
         padding: 22,
     },
 })

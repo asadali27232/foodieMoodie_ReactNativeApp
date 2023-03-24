@@ -45,7 +45,7 @@ export default function Login({ navigation }) {
                     path={require("../assets/icon_lock.png")}
                 />
                 <TouchableOpacity
-                    onPress={navigation.navigate("ForgotPassword")}
+                    onPress={() => navigation.navigate("ForgotPassword")}
                 >
                     <Text
                         style={{
@@ -76,7 +76,7 @@ export default function Login({ navigation }) {
             <View
                 style={{ flex: 0.2, width: "100%", justifyContent: "flex-end" }}
             >
-                <TouchableOpacity onPress={navigation.navigate("SignUp")}>
+                <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
                     <Text
                         style={{
                             alignSelf: "center",
