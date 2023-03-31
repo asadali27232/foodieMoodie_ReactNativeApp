@@ -39,7 +39,7 @@ export default function SignUp({ navigation }) {
   };
 
   const handleSignUp = () => {
-    console.log('Sign Up');
+    console.log('Signed Up');
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential.user);
