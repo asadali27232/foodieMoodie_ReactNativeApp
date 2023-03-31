@@ -14,6 +14,14 @@ import {
   signInWithEmailAndPassword,
 } from 'firebase/auth';
 
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  setDoc,
+  doc,
+} from 'firebase/firestore';
+
 export default function SignUp({ navigation }) {
   const [isChecked, setIsChecked] = useState(false);
 
@@ -42,13 +50,28 @@ export default function SignUp({ navigation }) {
     console.log('Signed Up');
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        console.log(userCredential.user);
-        userCredential.user.displayName = name;
+        const userData = {
+          name: name,
+          email: email,
+          phone: '03074315952',
+        };
+        saveUserData(userCredential.user.uid, userData);
         navigation.navigate('LandingPage');
       })
       .catch((error) => {
         console.log(error);
       });
+  };
+
+  const saveUserData = async (uid, userData) => {
+    const db = getFirestore();
+
+    try {
+      await setDoc(doc(db, 'users', uid), userData);
+      console.log('Document written with ID: ', uid);
+    } catch (e) {
+      console.error('Error adding document: ', e);
+    }
   };
 
   useEffect(() => {

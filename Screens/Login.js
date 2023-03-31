@@ -12,6 +12,16 @@ import {
   signInWithEmailAndPassword,
 } from 'firebase/auth';
 
+import {
+  getFirestore,
+  collection,
+  query,
+  where,
+  getDocs,
+  getDoc,
+  doc,
+} from 'firebase/firestore';
+
 export default function Login({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -29,16 +39,30 @@ export default function Login({ navigation }) {
   };
 
   const handleLogin = () => {
-    console.log('Login');
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        console.log('Loged in!');
-        console.log(userCredential.user);
+        getUserDetails(userCredential.user.uid);
         navigation.navigate('LandingPage');
       })
       .catch((error) => {
         console.log(error);
       });
+  };
+
+  const getUserDetails = async (uid) => {
+    const db = getFirestore();
+    const docRef = doc(db, 'users', uid);
+
+    try {
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        console.log('User data:', docSnap.data());
+      } else {
+        console.log('No such User!');
+      }
+    } catch (e) {
+      console.log('Error getting User:', e);
+    }
   };
 
   return (
