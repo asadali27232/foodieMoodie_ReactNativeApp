@@ -1,5 +1,5 @@
-import React from "react";
-import {StyleSheet, View, TextInput, Image} from "react-native";
+import React from 'react';
+import { StyleSheet, View, TextInput, Image } from 'react-native';
 
 export default function FoodieInput(props) {
   return (
@@ -21,10 +21,10 @@ export default function FoodieInput(props) {
 
 const styles = StyleSheet.create({
   inputContainer: {
-    width: "100%",
-    flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: "#FBFCFF",
+    width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#FBFCFF',
     borderRadius: 22,
     marginBottom: 18,
   },
@@ -32,9 +32,9 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 60,
     fontSize: 12,
-    justifyContent: "center",
+    justifyContent: 'center',
     marginStart: 22,
-    color: "#383F53",
+    color: '#383F53',
     fontSize: 12,
   },
   icon: {
