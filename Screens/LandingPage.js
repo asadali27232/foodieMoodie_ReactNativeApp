@@ -2,7 +2,7 @@ import { StyleSheet, FlatList, Text, View, Image } from 'react-native';
 import { useState } from 'react';
 import React from 'react';
 
-function HorList() {
+function LandingPage() {
   const [menu, setMenu] = useState([
     {
       key: 2,
@@ -158,4 +158,4 @@ const styles = StyleSheet.create({
     marginEnd: 10,
   },
 });
-export default HorList;
+export default LandingPage;
