@@ -1,4 +1,5 @@
 import React from 'react';
+import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Text } from 'react-native';
 import FoodieButton from '../Components/FoodieButton';
 import FoodieInput from '../Components/FoodieInput';
@@ -29,6 +30,7 @@ export default function ForgotPassword({ navigation }) {
         />
         <FoodieButton text="Done" />
       </View>
+      <StatusBar style="auto" />
     </View>
   );
 }
