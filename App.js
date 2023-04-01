@@ -15,7 +15,7 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <KeyboardAvoidingView style={styles.container} behavior="height">
+    <KeyboardAvoidingView style={styles.container} behavior="fixed">
       <NavigationContainer>
         <Stack.Navigator initialRouteName="LandingPage">
           <Stack.Screen
