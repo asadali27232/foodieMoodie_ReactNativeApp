@@ -2,10 +2,15 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 function Navbar(props) {
+  const { navigation } = props;
   return (
     <View style={styles.navContainer}>
       <View style={styles.sec1}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            navigation.goBack();
+          }}>
           <Image style={styles.logo} source={require('../assets/back.png')} />
         </TouchableOpacity>
       </View>

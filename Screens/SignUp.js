@@ -81,7 +81,7 @@ export default function SignUp({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={{ flex: 0.1, width: '100%' }}>
-        <Navbar text="Sign Up" />
+        <Navbar text="Sign Up" navigation={navigation} />
       </View>
       <View style={{ flex: 0.8, width: '100%' }}>
         <Label text="Email" />

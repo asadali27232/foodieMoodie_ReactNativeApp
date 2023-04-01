@@ -6,6 +6,8 @@ import Login from './Screens/Login';
 import ResetPassword from './Screens/ResetPassword';
 import SignUp from './Screens/SignUp';
 import Verification from './Screens/Verification';
+import Home from './Screens/Home';
+import Navbar from './Components/Navbar';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -19,6 +21,16 @@ export default function App() {
           <Stack.Screen
             name="LandingPage"
             component={LandingPage}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Navbar"
+            component={Navbar}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Home"
+            component={Home}
             options={{ headerShown: false }}
           />
           <Stack.Screen
