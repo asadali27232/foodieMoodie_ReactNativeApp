@@ -1,10 +1,14 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { View, Text, StyleSheet } from 'react-native';
+import { ImageBackground } from 'react-native';
 
 function LandingPage({ navigation }) {
   return (
     <View style={styles.container}>
+      <ImageBackground
+        source={require('./assets/pizza_background.jpg')}
+        style={styles.backgroundImage}></ImageBackground>
       <Text>Hi</Text>
       <StatusBar style="auto" />
     </View>
@@ -16,6 +20,12 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
     backgroundColor: '#fff',
+  },
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
