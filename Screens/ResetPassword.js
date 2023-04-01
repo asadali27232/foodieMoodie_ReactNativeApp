@@ -9,7 +9,7 @@ export default function ResetPassword({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={{ flex: 0.1, width: '100%' }}>
-        <Navbar text="Reset Password" />
+        <Navbar text="Reset Password" navigation={navigation} />
       </View>
       <View style={{ flex: 0.8, width: '100%' }}>
         <Text

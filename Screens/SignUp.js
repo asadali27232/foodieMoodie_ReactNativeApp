@@ -47,7 +47,6 @@ export default function SignUp({ navigation }) {
   };
 
   const handleSignUp = () => {
-    console.log('Signed Up');
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const userData = {
@@ -56,7 +55,7 @@ export default function SignUp({ navigation }) {
           phone: '03074315952',
         };
         saveUserData(userCredential.user.uid, userData);
-        navigation.navigate('LandingPage');
+        navigation.navigate('Home');
       })
       .catch((error) => {
         console.log(error);

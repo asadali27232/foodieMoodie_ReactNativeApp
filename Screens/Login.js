@@ -26,10 +26,6 @@ export default function Login({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  useEffect(() => {
-    console.log('Login Screen');
-  }, []);
-
   const handleEmailChange = (value) => {
     setEmail(value);
   };
@@ -42,7 +38,7 @@ export default function Login({ navigation }) {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         getUserDetails(userCredential.user.uid);
-        navigation.navigate('LandingPage');
+        navigation.navigate('Home');
       })
       .catch((error) => {
         console.log(error);

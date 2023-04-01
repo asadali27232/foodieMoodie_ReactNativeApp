@@ -8,7 +8,7 @@ export default function Verification({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={{ flex: 0.1, width: '100%' }}>
-        <Navbar text="OTP Number" />
+        <Navbar text="OTP Number" navigation={navigation} />
       </View>
       <View style={{ flex: 0.8, width: '100%', alignItems: 'center' }}>
         <Text
