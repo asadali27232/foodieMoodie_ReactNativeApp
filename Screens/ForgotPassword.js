@@ -10,7 +10,7 @@ export default function ForgotPassword({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={{ flex: 0.1, width: '100%' }}>
-        <Navbar text="Forgot Password" />
+        <Navbar text="Forgot Password" navigation={navigation} />
       </View>
       <View style={{ flex: 0.8, width: '100%' }}>
         <Label text="Enter you email" />

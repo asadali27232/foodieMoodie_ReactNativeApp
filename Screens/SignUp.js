@@ -73,10 +73,6 @@ export default function SignUp({ navigation }) {
     }
   };
 
-  useEffect(() => {
-    console.log('Sign Up Screen');
-  }, []);
-
   return (
     <View style={styles.container}>
       <View style={{ flex: 0.1, width: '100%' }}>
@@ -160,7 +156,7 @@ export default function SignUp({ navigation }) {
       </View>
       <View
         style={{
-          flex: 0.2,
+          flex: 0.1,
           width: '100%',
           justifyContent: 'flex-end',
         }}>
