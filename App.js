@@ -1,5 +1,10 @@
 import React from 'react';
-import { StyleSheet, View, KeyboardAvoidingView } from 'react-native';
+import {
+  StyleSheet,
+  View,
+  KeyboardAvoidingView,
+  ScrollView,
+} from 'react-native';
 import ForgotPassword from './Screens/ForgotPassword';
 import LandingPage from './Screens/LandingPage';
 import Login from './Screens/Login';
@@ -15,7 +20,7 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <KeyboardAvoidingView style={styles.container} behavior="fixed">
+    <View style={styles.container}>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="LandingPage">
           <Stack.Screen
@@ -60,7 +65,7 @@ export default function App() {
           />
         </Stack.Navigator>
       </NavigationContainer>
-    </KeyboardAvoidingView>
+    </View>
   );
 }
 
