@@ -42,70 +42,25 @@ function HorList() {
   };
 
   const renderItem = ({ item }) => {
-    const favoriteImageSource = item.like
-      ? require('../assets/like.png')
-      : require('../assets/notLike.png');
     return (
       <View
         style={{
-          borderColor: '#FBFCFF',
+          borderColor: '#fff',
           marginBottom: 10,
           borderRadius: 10,
-          borderWidth: 1,
           padding: 10,
           justifyContent: 'center',
           alignItems: 'center',
           flex: 1,
-          height: 250,
-          width: 180,
-          marginHorizontal: 5,
+          height: 100,
+          width: 200,
+          flexDirection: 'row',
         }}>
-        <View style={{ flex: 0.2, width: '100%' }}>
-          <View style={{ flex: 0.5, flexDirection: 'row' }}>
-            <View style={{ flex: 0.5, flexDirection: 'row' }}>
-              <Image
-                style={styles.star}
-                source={require('../assets/icons8_star_52px.png')}
-              />
-              <Text>{item.rating}</Text>
-            </View>
-            <View
-              style={{
-                flex: 0.5,
-                flexDirection: 'row',
-                justifyContent: 'flex-end',
-              }}>
-              <TouchableOpacity onPress={() => handleLike(item)}>
-                <Image style={styles.star} source={favoriteImageSource} />
-              </TouchableOpacity>
-            </View>
-          </View>
-        </View>
         <View style={{ flex: 0.5 }}>
           <Image style={styles.logo} source={{ uri: item.image }} />
         </View>
-        <View style={{ flex: 0.3 }}>
-          <View style={{ flex: 0.5 }}>
-            <Text
-              style={{
-                color: '#000000',
-                fontSize: 20,
-                fontWeight: 'bold',
-                marginVertical: 5,
-              }}>
-              {item.name}
-            </Text>
-          </View>
-          <View
-            style={{
-              flex: 0.5,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-            <Text style={{ color: '#383F53', fontSize: 14 }}>
-              ${item.price}
-            </Text>
-          </View>
+        <View style={{ flex: 0.5 }}>
+          <Text style={{ color: '#383F53', fontSize: 14 }}>{item.name}</Text>
         </View>
       </View>
     );
@@ -120,7 +75,7 @@ function HorList() {
           fontWeight: 'bold',
           marginVertical: 10,
         }}>
-        Popular Food
+        Category
       </Text>
       <FlatList
         horizontal
@@ -145,11 +100,10 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: '#00a7f8',
   },
   logo: {
-    width: 120,
-    height: 120,
+    width: 50,
+    height: 50,
   },
   star: {
     width: 18,
