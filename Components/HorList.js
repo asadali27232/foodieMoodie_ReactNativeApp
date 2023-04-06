@@ -9,13 +9,14 @@ import {
 import { useState, useEffect } from 'react';
 import React from 'react';
 
-import { app } from './Firebase';
+import { app } from '../Database';
 import { getDatabase, ref, onValue, update } from 'firebase/database';
 
 function HorList() {
   const [menu, setMenu] = useState();
 
   useEffect(() => {
+    console.log('menu', menu);
     const db = getDatabase(app);
     const dbRef = ref(db, 'alldeals/burgers');
 
@@ -43,8 +44,8 @@ function HorList() {
 
   const renderItem = ({ item }) => {
     const favoriteImageSource = item.like
-      ? require('./assets/like.png')
-      : require('./assets/notLike.png');
+      ? require('../assets/like.png')
+      : require('../assets/notLike.png');
     return (
       <View
         style={{
@@ -65,7 +66,7 @@ function HorList() {
             <View style={{ flex: 0.5, flexDirection: 'row' }}>
               <Image
                 style={styles.star}
-                source={require('./assets/icons8_star_52px.png')}
+                source={require('../assets/icons8_star_52px.png')}
               />
               <Text>{item.rating}</Text>
             </View>

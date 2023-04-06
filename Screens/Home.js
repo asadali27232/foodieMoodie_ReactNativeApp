@@ -1,12 +1,12 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import Horlist from '../Components/Horlist';
+import HorList from '../Components/HorList';
 
 function Home() {
   return (
     <View style={styles.container}>
-      <Horlist />
+      <HorList />
       <StatusBar style="auto" />
     </View>
   );

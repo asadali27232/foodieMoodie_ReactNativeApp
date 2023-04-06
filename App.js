@@ -22,7 +22,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="LandingPage">
+        <Stack.Navigator initialRouteName="Home">
           <Stack.Screen
             name="LandingPage"
             component={LandingPage}

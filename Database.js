@@ -15,7 +15,8 @@ const firebaseConfig = {
   messagingSenderId: '1080995849179',
   appId: '1:1080995849179:web:8a6ce9351e31afa0517dfe',
   measurementId: 'G-46QPXLFZVZ',
-  databaseURL: 'https://foodiemoodiedatabase-default-rtdb.firebaseio.com/',
+  databaseURL:
+    'https://foodiemoodiedatabase-default-rtdb.asia-southeast1.firebasedatabase.app',
 };
 
 // Initialize Firebase
