@@ -11,7 +11,6 @@ import {
 } from 'react-native';
 import HorList from '../Components/HorList';
 import CategoryList from '../Components/CategoryList';
-import FoodieInput from '../Components/FoodieInput';
 
 function Home() {
   return (
@@ -77,7 +76,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#f2f2f2',
+    backgroundColor: '#FDFDFD',
     borderRadius: 5,
     height: 50,
     paddingHorizontal: 5,

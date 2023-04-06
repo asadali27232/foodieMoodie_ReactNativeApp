@@ -52,9 +52,13 @@ function HorList() {
           justifyContent: 'center',
           alignItems: 'center',
           flex: 1,
-          height: 100,
-          width: 200,
+          height: 60,
+          width: 160,
           flexDirection: 'row',
+          borderRadius: 14,
+          borderWidth: 0.5,
+          borderColor: '#FDFDFD',
+          marginHorizontal: 8,
         }}>
         <View style={{ flex: 0.5 }}>
           <Image style={styles.logo} source={{ uri: item.image }} />
@@ -75,7 +79,7 @@ function HorList() {
           fontWeight: 'bold',
           marginVertical: 10,
         }}>
-        Category
+        Food Category
       </Text>
       <FlatList
         horizontal
@@ -102,8 +106,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   logo: {
-    width: 50,
-    height: 50,
+    width: 40,
+    height: 40,
   },
   star: {
     width: 18,
