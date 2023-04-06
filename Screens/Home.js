@@ -19,16 +19,22 @@ function Home() {
       <Text style={styles.text}>Hello Asad Ali!</Text>
       <Text style={styles.heading}>Choose your favourite food</Text>
       <View style={styles.search}>
-        <View style={{ flex: 0.8 }}>
+        <View
+          style={{ flex: 0.8, alignItems: 'center', justifyContent: 'center' }}>
           <FoodieInput
             haveIcon={true}
             path={require('../assets/search.png')}
             placeholder="Search"
           />
         </View>
-        <View style={{ flex: 0.2 }}>
+        <View
+          style={{
+            flex: 0.2,
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
           <Image
-            style={{ width: 30, height: 30 }}
+            style={{ width: 50, height: 50, marginBottom: 15 }}
             source={require('../assets/sq.png')}
           />
         </View>
@@ -43,12 +49,12 @@ function Home() {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    backgroundColor: '#F6F7FB',
+    backgroundColor: '#fff',
     padding: 22,
   },
   dot: {
-    width: 40,
-    height: 40,
+    width: 50,
+    height: 50,
   },
   heading: {
     fontSize: 25,
