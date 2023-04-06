@@ -46,20 +46,7 @@ function HorList() {
       ? require('../assets/like.png')
       : require('../assets/notLike.png');
     return (
-      <View
-        style={{
-          borderColor: '#FBFCFF',
-          marginBottom: 10,
-          borderRadius: 10,
-          borderWidth: 1,
-          padding: 10,
-          justifyContent: 'center',
-          alignItems: 'center',
-          flex: 1,
-          height: 250,
-          width: 180,
-          marginHorizontal: 5,
-        }}>
+      <View style={styles.listItem}>
         <View style={{ flex: 0.2, width: '100%' }}>
           <View style={{ flex: 0.5, flexDirection: 'row' }}>
             <View style={{ flex: 0.5, flexDirection: 'row' }}>
@@ -140,12 +127,17 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   listItem: {
-    width: '100%',
-    margin: 5,
-    padding: 20,
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#00a7f8',
+    marginBottom: 10,
+    padding: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
+    height: 250,
+    width: 180,
+    marginHorizontal: 5,
+    borderRadius: 14,
+    borderWidth: 0.5,
+    borderColor: '#F5F5F5',
   },
   logo: {
     width: 120,

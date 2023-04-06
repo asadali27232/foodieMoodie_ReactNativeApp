@@ -7,6 +7,7 @@ import {
   View,
   ScrollView,
   TouchableOpacity,
+  TextInput,
 } from 'react-native';
 import HorList from '../Components/HorList';
 import CategoryList from '../Components/CategoryList';
@@ -18,23 +19,21 @@ function Home() {
       <Image style={styles.dot} source={require('../assets/dot.png')} />
       <Text style={styles.text}>Hello Asad Ali!</Text>
       <Text style={styles.heading}>Choose your favourite food</Text>
-      <View style={styles.search}>
-        <View
-          style={{ flex: 0.8, alignItems: 'center', justifyContent: 'center' }}>
-          <FoodieInput
-            haveIcon={true}
-            path={require('../assets/search.png')}
-            placeholder="Search"
+      <View style={styles.inputContainer}>
+        <View style={styles.iconContainer}>
+          <Image
+            style={{ width: 30, height: 30, marginBottom: 15 }}
+            source={require('../assets/search.png')}
           />
         </View>
-        <View
-          style={{
-            flex: 0.2,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
+        <TextInput
+          style={styles.input}
+          placeholder="Enter text here..."
+          placeholderTextColor="#8c8c8c"
+        />
+        <View style={styles.iconContainer}>
           <Image
-            style={{ width: 50, height: 50, marginBottom: 15 }}
+            style={{ width: 30, height: 30, marginBottom: 15 }}
             source={require('../assets/sq.png')}
           />
         </View>
@@ -73,6 +72,30 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: 12,
+  },
+  inputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#f2f2f2',
+    borderRadius: 5,
+    height: 50,
+    paddingHorizontal: 5,
+    borderRadius: 12,
+    marginVertical: 20,
+  },
+  iconContainer: {
+    padding: 5,
+    borderRadius: 5,
+    marginTop: 14,
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 50,
+  },
+  input: {
+    flex: 1,
+    height: 50,
+    color: '#000',
   },
 });
 
