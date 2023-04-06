@@ -57,7 +57,7 @@ function HorList() {
           flexDirection: 'row',
           borderRadius: 14,
           borderWidth: 0.5,
-          borderColor: '#FDFDFD',
+          borderColor: '#F7F7F7',
           marginHorizontal: 8,
         }}>
         <View style={{ flex: 0.5 }}>
