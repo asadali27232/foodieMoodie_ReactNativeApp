@@ -45,7 +45,7 @@ function HorList() {
     return (
       <View
         style={{
-          backgroundColor: '#FBFCFF',
+          backgroundColor: '#fff',
           marginBottom: 10,
           borderRadius: 10,
           padding: 10,
