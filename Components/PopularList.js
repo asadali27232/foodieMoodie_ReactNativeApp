@@ -24,7 +24,10 @@ import {
 
 function PopularList(props) {
   const [menu, setMenu] = useState();
-
+  const [userLike, setUserLike] = useState([]);
+  useEffect(() => {
+    changeLikes();
+  }, []);
   useEffect(() => {
     const db = getDatabase(app);
     const dbRef = ref(db, 'listData/popular');
@@ -32,14 +35,22 @@ function PopularList(props) {
     onValue(
       dbRef,
       (snapshot) => {
+        console.log(userLike);
         const data = snapshot.val();
+        data.map((item) => {
+          if (userLike.includes(item.key)) {
+            item.like = true;
+          } else {
+            item.like = false;
+          }
+        });
         setMenu(data);
       },
       (error) => {
         console.error(error);
       }
     );
-  }, []);
+  }, [userLike]);
 
   const handleLike = async (item) => {
     // const db = getDatabase(app);
@@ -73,8 +84,15 @@ function PopularList(props) {
         bid: item.key,
       });
     }
+    changeLikes();
   };
-
+  const changeLikes = async () => {
+    const db = getFirestore();
+    const collectionRef = collection(db, 'userLikes');
+    const queryRef = query(collectionRef, where('uid', '==', props.uid));
+    const querySnapshot = await getDocs(queryRef);
+    setUserLike(querySnapshot.docs.map((doc) => doc.data().bid));
+  };
   const renderItem = ({ item }) => {
     const favoriteImageSource = item.like
       ? require('../assets/like.png')
