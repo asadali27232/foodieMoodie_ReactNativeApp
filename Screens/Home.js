@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import HorList from '../Components/PopularList';
 import CategoryList from '../Components/CategoryList';
+import BestList from '../Components/BestList';
 
 function Home() {
   return (
@@ -31,14 +32,17 @@ function Home() {
           placeholderTextColor="#8c8c8c"
         />
         <View style={styles.iconContainer}>
-          <Image
-            style={{ width: 30, height: 30, marginBottom: 15 }}
-            source={require('../assets/sq.png')}
-          />
+          <TouchableOpacity>
+            <Image
+              style={{ width: 30, height: 30, marginBottom: 15 }}
+              source={require('../assets/sq.png')}
+            />
+          </TouchableOpacity>
         </View>
       </View>
       <CategoryList />
       <HorList />
+      <BestList />
       <StatusBar style="auto" />
     </ScrollView>
   );
