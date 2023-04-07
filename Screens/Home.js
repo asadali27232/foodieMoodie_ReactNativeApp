@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   TextInput,
 } from 'react-native';
-import HorList from '../Components/HorList';
+import HorList from '../Components/PopularList';
 import CategoryList from '../Components/CategoryList';
 
 function Home() {

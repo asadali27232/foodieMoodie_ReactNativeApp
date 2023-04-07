@@ -12,11 +12,10 @@ import React from 'react';
 import { app } from '../Database';
 import { getDatabase, ref, onValue, update } from 'firebase/database';
 
-function HorList() {
+function PopularList() {
   const [menu, setMenu] = useState();
 
   useEffect(() => {
-    console.log('menu', menu);
     const db = getDatabase(app);
     const dbRef = ref(db, 'alldeals/burgers');
 
@@ -149,4 +148,4 @@ const styles = StyleSheet.create({
     marginEnd: 10,
   },
 });
-export default HorList;
+export default PopularList;

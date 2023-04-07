@@ -16,7 +16,6 @@ function HorList() {
   const [menu, setMenu] = useState();
 
   useEffect(() => {
-    console.log('menu', menu);
     const db = getDatabase(app);
     const dbRef = ref(db, 'alldeals/burgers');
 
