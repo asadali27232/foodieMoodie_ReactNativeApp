@@ -17,7 +17,7 @@ function PopularList() {
 
   useEffect(() => {
     const db = getDatabase(app);
-    const dbRef = ref(db, 'alldeals/burgers');
+    const dbRef = ref(db, 'listData/popular');
 
     onValue(
       dbRef,
@@ -33,7 +33,7 @@ function PopularList() {
 
   const handleLike = (item) => {
     const db = getDatabase(app);
-    const dbRef = ref(db, `alldeals/burgers/${item.key}`);
+    const dbRef = ref(db, `listData/popular/${item.key}`);
 
     update(dbRef, {
       like: !item.like,

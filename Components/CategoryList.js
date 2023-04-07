@@ -17,7 +17,7 @@ function HorList() {
 
   useEffect(() => {
     const db = getDatabase(app);
-    const dbRef = ref(db, 'alldeals/burgers');
+    const dbRef = ref(db, 'listData/category');
 
     onValue(
       dbRef,
@@ -30,16 +30,7 @@ function HorList() {
       }
     );
   }, []);
-
-  const handleLike = (item) => {
-    const db = getDatabase(app);
-    const dbRef = ref(db, `alldeals/burgers/${item.key}`);
-
-    update(dbRef, {
-      like: !item.like,
-    });
-  };
-
+  
   const renderItem = ({ item }) => {
     return (
       <View
