@@ -10,9 +10,19 @@ import { useState, useEffect } from 'react';
 import React from 'react';
 
 import { app } from '../Database';
-import { getDatabase, ref, onValue, update } from 'firebase/database';
+import { getDatabase, ref, onValue } from 'firebase/database';
+import {
+  collection,
+  getFirestore,
+  addDoc,
+  query,
+  where,
+  getDocs,
+  deleteDoc,
+  docRef,
+} from 'firebase/firestore';
 
-function PopularList() {
+function PopularList(props) {
   const [menu, setMenu] = useState();
 
   useEffect(() => {
@@ -31,13 +41,38 @@ function PopularList() {
     );
   }, []);
 
-  const handleLike = (item) => {
-    const db = getDatabase(app);
-    const dbRef = ref(db, `listData/popular/${item.key}`);
+  const handleLike = async (item) => {
+    // const db = getDatabase(app);
+    // const dbRef = ref(db, `listData/popular/${item.key}`);
 
-    update(dbRef, {
-      like: !item.like,
-    });
+    // update(dbRef, {
+    //   like: !item.like,
+    // });
+
+    // const db = getFirestore();
+    // const docRef = await addDoc(collection(db, 'userLikes'), {
+    //   uid: props.uid,
+    //   bid: item.key,
+    // });
+    const db = getFirestore();
+    const collectionRef = collection(db, 'userLikes');
+    const queryRef = query(
+      collectionRef,
+      where('uid', '==', props.uid),
+      where('bid', '==', item.key)
+    );
+    const querySnapshot = await getDocs(queryRef);
+    if (!querySnapshot.empty) {
+      // Delete the existing document
+      const docToDelete = querySnapshot.docs[0];
+      await deleteDoc(docToDelete.ref);
+    } else {
+      // Add a new document
+      await addDoc(collectionRef, {
+        uid: props.uid,
+        bid: item.key,
+      });
+    }
   };
 
   const renderItem = ({ item }) => {

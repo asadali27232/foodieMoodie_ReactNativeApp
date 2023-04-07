@@ -22,7 +22,7 @@ import {
   doc,
 } from 'firebase/firestore';
 
-export default function Login({ navigation }) {
+export default function Login({ routes, navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -38,7 +38,6 @@ export default function Login({ navigation }) {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         getUserDetails(userCredential.user.uid);
-        navigation.navigate('Home');
       })
       .catch((error) => {
         console.log(error);
@@ -53,6 +52,7 @@ export default function Login({ navigation }) {
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
         console.log('User data:', docSnap.data());
+        navigation.navigate('Home', { user: docSnap.data(), uid: uid });
       } else {
         console.log('No such User!');
       }

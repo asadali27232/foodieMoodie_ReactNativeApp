@@ -9,15 +9,16 @@ import {
   TouchableOpacity,
   TextInput,
 } from 'react-native';
-import HorList from '../Components/PopularList';
+import PopularList from '../Components/PopularList';
 import CategoryList from '../Components/CategoryList';
 import BestList from '../Components/BestList';
+import { useEffect } from 'react';
 
-function Home() {
+function Home({ route, navigation }) {
   return (
     <ScrollView style={styles.container}>
       <Image style={styles.dot} source={require('../assets/dot.png')} />
-      <Text style={styles.text}>Hello Asad Ali!</Text>
+      <Text style={styles.text}>Hello {route.params.user.name}!</Text>
       <Text style={styles.heading}>Choose your favourite food</Text>
       <View style={styles.inputContainer}>
         <View style={styles.iconContainer}>
@@ -41,7 +42,7 @@ function Home() {
         </View>
       </View>
       <CategoryList />
-      <HorList />
+      <PopularList uid={route.params.uid} />
       <BestList />
       <StatusBar style="auto" />
     </ScrollView>
