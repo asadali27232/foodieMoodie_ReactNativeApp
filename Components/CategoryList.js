@@ -30,26 +30,10 @@ function HorList() {
       }
     );
   }, []);
-  
+
   const renderItem = ({ item }) => {
     return (
-      <View
-        style={{
-          backgroundColor: '#fff',
-          marginBottom: 10,
-          borderRadius: 10,
-          padding: 10,
-          justifyContent: 'center',
-          alignItems: 'center',
-          flex: 1,
-          height: 60,
-          width: 160,
-          flexDirection: 'row',
-          borderRadius: 14,
-          borderWidth: 0.5,
-          borderColor: '#F7F7F7',
-          marginHorizontal: 8,
-        }}>
+      <View style={styles.listItem}>
         <View style={{ flex: 0.5 }}>
           <Image style={styles.logo} source={{ uri: item.image }} />
         </View>
@@ -89,11 +73,20 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   listItem: {
-    width: '100%',
-    margin: 5,
-    padding: 20,
+    backgroundColor: '#fff',
+    marginBottom: 10,
     borderRadius: 10,
-    borderWidth: 1,
+    padding: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
+    height: 60,
+    width: 160,
+    flexDirection: 'row',
+    borderRadius: 14,
+    borderWidth: 0.5,
+    borderColor: '#F7F7F7',
+    marginHorizontal: 8,
   },
   logo: {
     width: 40,
