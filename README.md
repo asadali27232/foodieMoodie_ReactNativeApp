@@ -30,6 +30,8 @@ Inside this repository, you'll find a React Native app project that showcases:
 
 5. Learn from the app's API integration to understand how to fetch and display data in your mobile applications.
 
+## Conclusion
+
 This repository is an excellent starting point for React Native enthusiasts and mobile app developers looking to harness the power of React Native and Expo for building feature-rich and user-friendly mobile applications.
 
 Feel free to contribute, share your insights, or collaborate with fellow developers to further enhance this repository as a learning resource.
